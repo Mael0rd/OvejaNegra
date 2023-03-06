@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+ 
+  function mostrarGaleria(event, galeria) {
+    event.preventDefault();
+    var galerias = document.querySelectorAll('.gallery-container');
+    for (var i = 0; i < galerias.length; i++) {
+      if (galerias[i].id === galeria) {
+        galerias[i].classList.remove('d-none');
+      } else {
+        galerias[i].classList.add('d-none');
+      }
+    }
+  }
+
+
+
   /**
    * Mobile nav toggle
    */
